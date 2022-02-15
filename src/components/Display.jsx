@@ -3,6 +3,6 @@ import "./Display.css";
 
 export default function display(props) {
   return <div className="display">
-            {props.value}
+            <span className="item">{props.value}</span>
           </div>;
 }
