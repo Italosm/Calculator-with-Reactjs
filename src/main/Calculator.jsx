@@ -80,7 +80,7 @@ export default class Calculator extends Component {
                     this.setState({
                         displayValue: values[1],
                         operation: equals ? operation : currentOperation,
-                        current: 0,
+                        current: 1,
                         clearDisplay: currentDisplayValue === 0 ? true : !equals,
                         values
                     })
@@ -126,6 +126,7 @@ export default class Calculator extends Component {
         if (n === '.' && this.state.displayValue.includes('.') && this.state.current === 0) {
             return;
         }
+        console.log(this.state.current)
 
         const clearDisplay = this.state.displayValue === '0' || this.state.clearDisplay;
         const currentValue = clearDisplay ? '' : this.state.displayValue;
